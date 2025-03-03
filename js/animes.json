@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Chainsaw Man",
+        "rating": 4.9,
+        "reviews": "374k",
+        "image": "img/chainsaw.webp"
+    },
+    {
+        "id": 2,
+        "name": "Attack on Titan",
+        "rating": 4.8,
+        "reviews": "500k",
+        "image": "img/aot.webp"
+    },
+    {
+        "id": 3,
+        "name": "Jujutsu Kaisen",
+        "rating": 4.7,
+        "reviews": "450k",
+        "image": "img/jujutsu.webp"
+    }
+]
