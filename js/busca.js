@@ -1,5 +1,5 @@
 document.getElementById('search-input').addEventListener('input', function(){
-    const query = this.Value;
+    const query = this.value;
 
     fetch(`/search?q=${query}`)
     .then(response => response.json())

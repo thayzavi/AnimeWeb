@@ -19,5 +19,14 @@
         "rating": 4.7,
         "reviews": "450k",
         "image": "img/jujutsu.webp"
-    }
+    },
+        {
+          "nome": "Naruto",
+          "descricao": "Naruto é um jovem ninja que sonha em se tornar o Hokage, o líder de sua vila."
+        },
+        {
+          "nome": "One Piece",
+          "descricao": "Monkey D. Luffy parte em uma jornada para encontrar o One Piece, o maior tesouro do mundo."
+        }
+      
 ]

@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style/style.css" >
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,8 +55,9 @@
 <script>
     const searchInput = document.getElementById('search-input');
     const animeList = document.getElementById('animeList');
+    const searchButton = document.getElementById('search-button');
 
-    searchInput.addEventListener('input', async () => {
+    async function searchAnimes() {
         const query = searchInput.value;
         if (query.length > 2) {  // Realiza a pesquisa a partir de 3 caracteres
             const response = await fetch(`/search?q=${query}`);
@@ -66,14 +66,21 @@
             animeList.innerHTML = '';
             animes.forEach(anime => {
                 const div = document.createElement('div');
+                div.classList.add('anime-item');
                 div.innerHTML = `<h3>${anime.nome}</h3><p>${anime.descricao}</p>`;
                 animeList.appendChild(div);
             });
         } else {
-            animeList.innerHTML = '';
+            animeList.innerHTML = '<p style="color: white;">Digite pelo menos 3 caracteres.</p>';
         }
-    });
+    }
+
+    // Acionar a busca ao clicar no botão
+    searchButton.addEventListener('click', searchAnimes);
+
+    // Acionar a busca ao digitar
+    searchInput.addEventListener('input', searchAnimes);
 </script>
+
 <script src="js/script.js"></script>
-<script src="js/busca.js"></script>
 </html>
