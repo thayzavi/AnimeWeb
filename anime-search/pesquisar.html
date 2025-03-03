@@ -203,10 +203,11 @@ i{
             animes.forEach(anime => {
                 const div = document.createElement('div');
                 div.classList.add('anime-item');
-                div.innerHTML = `<img src="${anime.imagem}" alt="${
-                anime.nome}">
+                div.innerHTML = `
                 <h3>${anime.nome}</h3>
-                <p>${anime.descricao}</p>`;
+                <img src="${anime.imagem}" alt="${
+                anime.nome}">
+                <p>${anime.descricao}</p> <br>`;
                 animeList.appendChild(div);
             });
         } else {

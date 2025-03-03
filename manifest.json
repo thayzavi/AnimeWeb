@@ -3,6 +3,7 @@
 "short_name": "AnimeApp",
 "description" :"Uma plataforma para assistir e descobrir animes",
 "start_url":"index.html",
+"scope":"/",
 "display":"standalone",
 "background_color":"#000000",
 "theme_color":"#ff4500",
