@@ -4,6 +4,7 @@
 @import url(feedbacks.css);
 @import url(footer.css);
 @import url(templete.css);
+@import url(pesquisar.css);
 
 *{
     font-family: sans-serif;
