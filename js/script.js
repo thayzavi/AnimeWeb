@@ -16,4 +16,3 @@ document.addEventListener("click", function(event){
     if (!menu.contains(event.target) && !icon.contains(event.target))menu.style.display = "none";
 });
 
-

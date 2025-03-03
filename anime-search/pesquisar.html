@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>search</title>
@@ -78,6 +78,13 @@
 }
 .menu-lateral a:hover{
     background-color: #ff5e00;
+}
+#animeList{
+    color: azure; 
+    margin-top: 24px; 
+    text-align: center; 
+    font-size: 10px; 
+    padding: 15px;
 }
 .container-busca {
     justify-content: center;  /* Centraliza horizontalmente */
@@ -178,9 +185,10 @@ i{
             type="text" maxlength="900" placeholder=" O que você quer assistir ?"/>
             <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
-    <div id="animeList" style="color: azure; margin-top: 20px; text-align: center;"></div>
+    <div id="animeList" style="color: azure; margin-top: 24px; text-align: center; font-size: 15px; gap: 0.5rem;"></div>
 </body>
 <script>
+    // function para buscar api
     const searchInput = document.getElementById('search-input');
     const animeList = document.getElementById('animeList');
     const searchButton = document.getElementById('search-button');
@@ -195,7 +203,10 @@ i{
             animes.forEach(anime => {
                 const div = document.createElement('div');
                 div.classList.add('anime-item');
-                div.innerHTML = `<h3>${anime.nome}</h3><p>${anime.descricao}</p>`;
+                div.innerHTML = `<img src="${anime.imagem}" alt="${
+                anime.nome}">
+                <h3>${anime.nome}</h3>
+                <p>${anime.descricao}</p>`;
                 animeList.appendChild(div);
             });
         } else {
