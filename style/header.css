@@ -66,6 +66,7 @@ header{
 .menu-lateral a:hover{
     background-color: #ff5e00;
 }
+
 @media screen and (max-width: 1170px) {
     #nav_list, #navbar .btn-default{
         display: none;
